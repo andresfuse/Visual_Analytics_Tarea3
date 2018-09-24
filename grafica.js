@@ -124,7 +124,6 @@ var z = d3.scaleOrdinal()
           .attr("x", width - 24)
           .attr("y", 9.5)
           .attr("dy", "0.32em")
-          .attr("transform", "rotate(90)")
           .text(function(d) { return d; });
 
       var num = g.append("g")
@@ -138,5 +137,23 @@ var z = d3.scaleOrdinal()
          .transition().duration(800)
             .attr("y", function(d) { return y(d[1]); })
             .text(function(d) {return d.total;});
+    
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+      .selectAll("text")
+        .attr("y", 0)
+        .attr("x", 9)
+        .attr("dy", ".35em")
+        .attr("transform", "rotate(90)")
+        .style("text-anchor", "start");
+
 }
 actualizar(data)
