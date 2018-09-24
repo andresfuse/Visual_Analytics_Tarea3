@@ -70,7 +70,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
    .range(["#98abc5", "#8a89a6", "#7b6888"]);
   
-var keys = data.columns.slice(1);
+//var keys = data.columns.slice(1);
     
 data.sort(function(a, b) { return b.total - a.total; });
 x.domain(data.map(function(d) { return d.ciudad; }));
