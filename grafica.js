@@ -70,8 +70,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
    .range(["#98abc5", "#8a89a6", "#7b6888"]);
     
-    var keys = (["choques","heridos","muertos"])
-    data.sort(function(a, b) { return b.total - a.total; });
+    var keys = (["choques","heridos","muertos"]);
     x.domain(data.map(function(d) { return d.ciudad; }));
     y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
     z.domain(keys);
