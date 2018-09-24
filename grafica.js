@@ -51,7 +51,6 @@ var data=[
 { ciudad: "SIBATE" , choques: 318 , heridos: 79 , muertos: 11 , total: 408},
 
 ]
-<svg width="960" height="500"></svg>
 
 function actualizar(myData){
 var svg = d3.select("svg"), 
