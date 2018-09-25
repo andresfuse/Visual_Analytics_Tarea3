@@ -54,7 +54,7 @@ var data=[
 
 function actualizar(myData){
 var svg = d3.select("svg"), 
-    margin = {left: 200, right: 30, top: 20, bottom: 20},
+    margin = {left: 30, right: 30, top: 20, bottom: 20},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -104,10 +104,27 @@ var z = d3.scaleOrdinal()
          .attr("font-weight", "bold")
          .attr("text-anchor", "start")
          .text("Registros de accidentes 2017");
+    
+      var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+      .selectAll("text")
+        .attr("y", 0)
+        .attr("x", 9)
+        .attr("dy", ".35em")
+        .attr("transform", "rotate(90)")
+        .style("text-anchor", "start");
 
       var legend = g.append("g")
          .attr("font-family", "sans-serif")
-         .attr("font-size", 10)
+         .attr("font-size",7)
          .attr("text-anchor", "end")
         .selectAll("g")
         .data(keys.slice().reverse())
@@ -131,12 +148,12 @@ var z = d3.scaleOrdinal()
          .attr("font-size", 10)
          .attr("text-anchor", "end");
 
-        num.append("text")
+        g.append("g").enter().num.append("text")
          .transition().duration(800)
             .attr("x",function (d){ return x(d.data.ciudad); })
          .transition().duration(800)
             .attr("y", function(d) { return y(d[1]); })
             .text(function(d) {return d.total;});
-
+    
 }
 actualizar(data)
