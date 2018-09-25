@@ -54,7 +54,7 @@ var data=[
 
 function actualizar(myData){
 var svg = d3.select("svg"), 
-    margin = {left: 30, right: 30, top: 20, bottom: 20},
+    margin = {left: 300, right: 50, top: 20, bottom: 20},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -110,17 +110,6 @@ var z = d3.scaleOrdinal()
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-      svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis)
-      .selectAll("text")
-        .attr("y", 0)
-        .attr("x", 9)
-        .attr("dy", ".35em")
-        .attr("transform", "rotate(90)")
-        .style("text-anchor", "start");
 
       var legend = g.append("g")
          .attr("font-family", "sans-serif")
