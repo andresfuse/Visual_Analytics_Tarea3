@@ -68,7 +68,7 @@ var y = d3.scaleLinear()
    .rangeRound([height, 0]);
     
 var z = d3.scaleOrdinal()
-   .range(["#98abc5", "#d0743c", "#ff8c00"]);
+   .range(d3.schemeCategory10);
     
     var keys = (["choques","heridos","muertos"]);
     x.domain(data.map(function(d) { return d.ciudad; }));
