@@ -54,7 +54,7 @@ var data=[
 
 function actualizar(myData){
 var svg = d3.select("svg"), 
-    margin = {left: 80, right: 50, top: 20, bottom: 20},
+    margin = {left: 80, right: 50, top: 50, bottom: 20},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -134,7 +134,7 @@ var z = d3.scaleOrdinal()
 
       var num = g.append("g")
          .attr("font-family", "sans-serif")
-         .attr("font-size", 10)
+         .attr("font-size", 18)
          .attr("text-anchor", "end");
 
         //g.append("g").enter().num.append("text")
