@@ -1,5 +1,5 @@
 # Visual_Analytics_Tarea3_af.useche10
-# What: los datos es una tabla, en donde las filas corresponden a registros de accidentes y las columnas son: Año accidente (cuantitativo-secuencial), Mes accidente (cuantitativo-secuencial), Día accidente (cuantitativo-secuencial), Ciudad de registro (Categórico), Área del accidente (categórico), Clase de accidente (categórico), Gravedad del accidente (categórico).
+# What: los datos sin una tabla, en donde las filas corresponden a registros de accidentes y las columnas son: Año accidente (cuantitativo-secuencial), Mes accidente (cuantitativo-secuencial), Día accidente (cuantitativo-secuencial), Ciudad de registro (Categórico), Área del accidente (categórico), Clase de accidente (categórico), Gravedad del accidente (categórico).
 # Objetivo de la visualización: encontrar las ciudades con mayor número de accidentes en 2017.
 # Objetivos secundarios: diferenciar la accidentalidad en 2017 de acuerdo a la gravedad del mismo: solo choque, con heridos y con muertos.
 # Why: principal -> lookup distribution of number of car accidents. secundario -> compare par-to-whole relationship
