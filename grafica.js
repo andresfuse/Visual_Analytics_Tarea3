@@ -113,7 +113,7 @@ var z = d3.scaleOrdinal()
 
       var legend = g.append("g")
          .attr("font-family", "sans-serif")
-         .attr("font-size",15)
+         .attr("font-size",20)
          .attr("text-anchor", "end")
         .selectAll("g")
         .data(keys.slice().reverse())
